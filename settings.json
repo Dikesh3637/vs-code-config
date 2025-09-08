@@ -1,0 +1,93 @@
+{
+  "workbench.activityBar.location": "bottom",
+  "chat.commandCenter.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "editor.fontFamily": "JetBrainsMono NF",
+  "editor.lineHeight": 1.6,
+  "vim.smartRelativeLine": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    //Navigation
+    //switch between buffers
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    //Splits
+    {
+      "before": ["<C-w>", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["<C-w>", "s"],
+      "commands": [":split"]
+    },
+    //panes
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    //toggle activity bar
+    {
+      "before": ["<C-b>"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    //formatting the doc
+    {
+      "before": ["leader", "leader"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    //code actions / code quick fix
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["leader", "s", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    //comment line
+    {
+      "before": ["g", "c", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["s"],
+      "commands": ["leap.find"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    //comment line
+    {
+      "before": ["g", "c", "c"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ],
+  "json.validate.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.customTitleBarVisibility": "windowed",
+  "editor.minimap.enabled": false
+}
+
