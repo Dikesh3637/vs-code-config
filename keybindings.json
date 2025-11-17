@@ -1,76 +1,37 @@
-// Place your key bindings in this file to override the defaults
 [
-  //Status bar visibility.
-  {
-    "key": "ctrl+shift+oem_5",
-    "command": "workbench.action.toggleStatusbarVisibility"
-  },
-  //move lines
   {
     "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "textInputFocus && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    "command": "vscode-neovim.send",
+    "args": "<a-j>",
+    "when": "editorTextFocus && neovim.init"
   },
   {
     "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "textInputFocus && (vim.mode == 'Normal' || vim.mode == 'Visual')"
+    "command": "vscode-neovim.send",
+    "args": "<a-k>",
+    "when": "editorTextFocus && neovim.init"
   },
   {
-    "key": "space+s+f",
-    "command": "workbench.action.quickOpen"
-  },
-  //file explorer ops
-  {
-    "command": "filesExplorer.findInFolder",
-    "key": "/",
-    "when": "filesExplorerFocus && !inputFocus"
+    "key": "alt+l",
+    "command": "vscode-neovim.send",
+    "args": "<a-l>",
+    "when": "editorTextFocus && neovim.init"
   },
   {
-    "command": "previousCompressedFolder",
-    "key": "h",
-    "when": "filesExplorerFocus && !inputFocus"
+    "key": "alt+h",
+    "command": "vscode-neovim.send",
+    "args": "<a-h>",
+    "when": "editorTextFocus && neovim.init"
+  },
+  //toggle file explorer
+  {
+    "key": "-",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus && neovim.mode == normal"
   },
   {
-    "command" :"nextCompressedFolder",
-    "key": "l",
-    "when": "filesExplorerFocus && !inputFocus"
+    "key": "-",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus"
   }
-  {
-    "command": "deleteFile",
-    "key": "d",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "shift+a",
-    "command": "explorer.newFolder",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "command": "renameFile",
-    "key": "r",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "command": "workbench.action.quickOpenSelectNext",
-    "key": "ctrl+j"
-  },
-  {
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "key": "ctrl+k"
-  },
-  {
-    "command": "selectNextSuggestion",
-    "key": "ctrl+j"
-  },
-  {
-    "command": "selectPrevSuggestion",
-    "key": "ctrl+k"
-  }
-
 ]
