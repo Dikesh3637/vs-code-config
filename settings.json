@@ -1,93 +1,53 @@
 {
-  "workbench.activityBar.location": "bottom",
   "chat.commandCenter.enabled": false,
   "workbench.navigationControl.enabled": false,
   "window.commandCenter": false,
   "workbench.colorTheme": "Catppuccin Mocha",
-  "vim.leader": "<Space>",
-  "vim.hlsearch": true,
   "editor.fontFamily": "JetBrainsMono NF",
   "editor.lineHeight": 1.6,
-  "vim.smartRelativeLine": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    //Navigation
-    //switch between buffers
-    {
-      "before": ["<S-h>"],
-      "commands": [":bprevious"]
-    },
-    {
-      "before": ["<S-l>"],
-      "commands": [":bnext"]
-    },
-    //Splits
-    {
-      "before": ["<C-w>", "v"],
-      "commands": [":vsplit"]
-    },
-    {
-      "before": ["<C-w>", "s"],
-      "commands": [":split"]
-    },
-    //panes
-    {
-      "before": ["<C-h>"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["<C-j>"],
-      "commands": ["workbench.action.focusBelowGroup"]
-    },
-    {
-      "before": ["<C-k>"],
-      "commands": ["workbench.action.focusAboveGroup"]
-    },
-    {
-      "before": ["<C-l>"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
-    //toggle activity bar
-    {
-      "before": ["<C-b>"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    //formatting the doc
-    {
-      "before": ["leader", "leader"],
-      "commands": ["editor.action.formatDocument"]
-    },
-    //code actions / code quick fix
-    {
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
-    },
-    {
-      "before": ["leader", "s", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    //comment line
-    {
-      "before": ["g", "c", "c"],
-      "commands": ["editor.action.commentLine"]
-    },
-    {
-      "before": ["s"],
-      "commands": ["leap.find"]
-    }
-  ],
-  "vim.visualModeKeyBindings": [
-    //comment line
-    {
-      "before": ["g", "c", "c"],
-      "commands": ["editor.action.commentLine"]
-    }
-  ],
+  "editor.wordWrap": "off",
+  "editor.minimap.enabled": false,
   "json.validate.enable": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.customTitleBarVisibility": "windowed",
-  "editor.minimap.enabled": false
-}
+  "editor.minimap.enabled": false,
+  "redhat.telemetry.enabled": true,
+  "terminal.integrated.defaultProfile.windows": "JavaSE-24",
+  "terminal.integrated.fontFamily": "monospace",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "editor.formatOnSave": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "workbench.activityBar.location": "top",
+  "editor.wordWrapColumn": 60,
+  "window.newWindowProfile": "Default",
+  "git.openRepositoryInParentFolders": "always",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "java": true,
+    "xml": false,
+    "javascript": true
+  },
+  "workbench.sideBar.location": "right",
+  "workbench.editor.restoreViewState": false,
+  "diffEditor.wordWrap": "off",
+  "editor.codeLens": false,
 
+  // neovim extension
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
+  "remote.extensionKind": {
+    "asvetliakov.vscode-neovim": ["workspace"]
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/dikesh/.config/nvim-vscode/init.lua"
